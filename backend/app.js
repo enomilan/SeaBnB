@@ -18,7 +18,7 @@ app.use(cookieParser());
 app.use(express.json());
 
 
-
+// Security Middleware
 if (!isProduction) {
     app.use(cors());
     app.use(helmet({
@@ -38,8 +38,7 @@ if (!isProduction) {
 
 app.use(routes); // Connect all the routes
 
-
-
+// Catch unhandled requests and forward to error handler.
 app.use((_req, _res, next) => {
     const err = new Error("The requested resource couldn't be found.");
     err.title = "Resource Not Found";
@@ -59,7 +58,7 @@ app.use((err, _req, _res, next) => {
 });
 
 
-//custom error handler
+//Custom error handler
 app.use((err, _req, res, _next) => {
     res.status(err.status || 500);
     console.error(err); //can alter to show less information
