@@ -1,9 +1,10 @@
 const router = require('express').Router();
 const sessionRouter = require('./session.js');
 const usersRouter = require('./users.js');
+const placesRouter = require('./places');
 
 router.use('/session', sessionRouter);
-
+router.use('');
 router.use('/users', usersRouter);
 
 //!TEST ROUTES
