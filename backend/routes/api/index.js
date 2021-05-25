@@ -4,7 +4,7 @@ const usersRouter = require('./users.js');
 const placesRouter = require('./places');
 
 router.use('/session', sessionRouter);
-router.use('');
+router.use('/places', placesRouter);
 router.use('/users', usersRouter);
 
 //!TEST ROUTES

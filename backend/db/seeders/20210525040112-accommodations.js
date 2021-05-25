@@ -10,7 +10,7 @@ module.exports = {
           price: '54',
           description: "This location",
           location: 'Dubrovnik, Croatia',
-          image: 'insertImageHere',
+          image: '../',
           userId: 2,
           createdAt: new Date(),
           updatedAt: new Date()
