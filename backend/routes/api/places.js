@@ -9,6 +9,7 @@ router.get("/", asyncHandler(async (req, res) =>{
     return res.json(places)
 }))
 
+//display all users
 router.get("/users", asyncHandler(async (req, res) =>{
     const places = await User.findAll()
     return res.json(places)
