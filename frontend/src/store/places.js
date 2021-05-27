@@ -86,7 +86,7 @@ export const getReviews = (id) => async (dispatch) => {
   };
 
   export const deleteReview = (id) => async dispatch => {
-    const response = await csrfFetch(`/api/spots/review/${id}`, {
+    const response = await csrfFetch(`/api/places/review/${id}`, {
         method: 'DELETE'
     });
 
@@ -100,8 +100,38 @@ const initialState = {};
 
 //define reducer
 const placeReducer = (state = initialState, action) => {
-
-
+    let newState
+    switch (action.type) {
+        case GET_ONE: {
+            const placeState = {...state}
+            placeState.currentPlace = action.place
+            return placeState
+        }
+        case GET_ALL: {
+            
+            action.places.forEach(place =>{
+                newState[place.id] = place
+            })
+            return {...state,...newState}
+        }
+        case GET_REVIEWS:{
+            const reviews = action.reviews
+            return {...state, reviews}  
+        }
+        case POST_REVIEW:{
+            newState = { ...state }
+            newState.reviews = [...state.reviews, action.review]
+            return newState 
+        }
+        case DELETE_REVIEW:{
+            newState = { ...state }
+            const newReviews = newState.reviews.filter(review => review.id !== action.review);
+            newState.reviews = [...newReviews]
+            return newState
+        }
+        default:
+            return state; 
+    }
 
 }
 
