@@ -1,6 +1,6 @@
-* {
+/* .welcome {
     background-image: url(../../images/Ksamill-1.jpg)
-}
+} */
 
 .home, .signup, .login {
     display: grid;

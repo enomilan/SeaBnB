@@ -11,8 +11,21 @@ router.get("/", asyncHandler(async (req, res) =>{
 
 //display all users
 router.get("/users", asyncHandler(async (req, res) =>{
-    const places = await User.findAll()
-    return res.json(places)
+    const users = await User.findAll()
+    return res.json(users)
+}))
+
+//get one place
+
+router.get("/:id", asyncHandler(async (req, res) =>{
+    const id = req.params.id
+    const place = await Accommodation.findByPk(id, {
+        include:[
+            
+            {model: Review, required: false, where: { accommodationId: id}}, 
+            {model: Booking, required: false, where: { accommodationId: id}}],})
+       
+    return res.json(place)
 }))
 
 //get reviews By ID
