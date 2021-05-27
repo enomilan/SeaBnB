@@ -12,12 +12,12 @@ const DELETE_REVIEW = 'places/DELETE_REVIEW'
 //action creators
 const getOne = (place) =>({
     type: GET_ONE,
-    locations,
+    place,
 })
 
-const getAll = (place) => ({
+const getAll = (places) => ({
     type: GET_ALL,
-    location,
+    places,
 
 })
 
