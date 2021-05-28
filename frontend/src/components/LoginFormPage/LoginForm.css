@@ -1,11 +1,11 @@
 .login {
-    /* background-image: url('../../images/log_in.jpg');
-    height: 700px; */
-    background-color: aqua;
+    background-image: url('../../images/log_in.jpg');
+    height: auto;
+    /* background-color: aqua; */
 }
 
 
-.login__form {
+/* .login__form {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -16,6 +16,6 @@
     max-width: 45%;
     
     
-}
+} */
 
 .button {}
