@@ -3,12 +3,12 @@ import { useEffect } from 'react'
 import { Redirect } from 'react-router-dom';
 import { useDispatch, useSelector} from 'react-redux'
 import * as placeReducer from '../../store/places'
-import './welcome.css'
+import './places.css'
 
 
 
 
-function Welcome() {
+function Places() {
     
     const sessionUser = useSelector(state => state.session.user);
     const dispatch = useDispatch()
@@ -29,16 +29,14 @@ function Welcome() {
 
     return(
         <div className='place'>
-            <div id="single" className="container">
-                <div id ='name'>
+            <div >
+                
                     
-                </div>
+                
                 <div id='image'>
                     {places.map(place=> <img src={place.image} key={place.id} />)}
-                    
-
-                </div>
-                <div id='information'></div>
+                                
+                
                     <div id='location'>
                         {places.location}
                     </div>
@@ -48,7 +46,7 @@ function Welcome() {
                     <div id= 'description'>
                         {places.description}
                     </div>
-
+                </div>
 
             </div>
         </div>
@@ -57,4 +55,4 @@ function Welcome() {
     )
 }
 
-export default Welcome
+export default Places
