@@ -15,7 +15,7 @@ const getOne = (place) =>({
     place,
 })
 
-const getAll = places => ({
+const getAll = (places) => ({
     type: LOAD_ALL,
     places,
 
@@ -55,7 +55,7 @@ export const getPlaces = () => async dispatch => {
 
     if (res.ok) {
         const places = await res.json()
-        console.log('THIS IS PLACES',places)
+        
         dispatch(getAll(places));
     }
 }

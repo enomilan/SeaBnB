@@ -1,9 +1,28 @@
 .message {
     background-image: url('../../images/welcome_page.jpg');
     height: 900px;
-    
+ 
 
 }
 
 
+.places{
 
+    display: grid;
+    background-color:#002e63;
+    color: burlywood;
+
+}
+
+
+.photo img {
+    width: 950px;
+    height: 600px;
+    object-fit: fill;
+
+}
+
+#text {
+
+    color: burlywood;
+}

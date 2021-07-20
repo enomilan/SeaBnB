@@ -28,27 +28,45 @@ function Places() {
 
 
     return(
-        <div className='place'>
-            <div >
+        <div >
+            
                 
                     
                 
-                <div id='image'>
-                    {places.map(place=> <img src={place.image} key={place.id} />)}
-                                
+                <div className='places'>
+                    {places.map(place=> {
+                    return (
+
+                        <div key={place.id}>
+
+                        Location: <a href={`/places/${place.id}`} id='text'>{place.location}</a>
+                            <span> Price: ${place.price}</span>
+                           
+                             
+                            <div className='photo'><img src={place.image}/></div>
+                            
+                        </div>
+                    
+                    
+
+                    //   
+                    //              
                 
-                    <div id='location'>
-                        {places.location}
-                    </div>
-                    <div id ='price'>
-                        ${places.price}
-                    </div>
-                    <div id= 'description'>
-                        {places.description}
-                    </div>
+                    // <div id='location'>
+                       
+                    // </div>
+                    // <div id ='price'>
+                    //     
+                    // </div>
+                    // <div id= 'description'>
+                    //     {places.description}
+                    // </div>
+                    
+                )})}
+
                 </div>
 
-            </div>
+            
         </div>
     
 
