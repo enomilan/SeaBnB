@@ -5,6 +5,7 @@ import { Route, Switch } from "react-router-dom";
 import LoginFormPage from "./components/LoginFormPage";
 import SignupFormPage from "./components/SignupFormPage";
 import Places from "./components/Places"
+import Place from "./components/Place"
 //import Reviews from './components/Reviews'
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
@@ -31,7 +32,7 @@ function App() {
             <SignupFormPage />
           </Route>
           <Route path="/places/:id">
-            
+            <Place/>
           </Route>
         </Switch>
       )}
