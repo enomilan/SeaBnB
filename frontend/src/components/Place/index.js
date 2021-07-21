@@ -31,7 +31,7 @@ function Place() {
         <div >
             <div>{place.name}</div>
             <div>{place.location}</div>
-            <div> Your for only ${place.price} a night</div>
+            <div> Yours for only ${place.price} a night</div>
             <div>{place.description}</div>
             <img src={place.image}/>
         </div>
