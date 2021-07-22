@@ -3,6 +3,7 @@ import * as sessionActions from '../../store/session';
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import './LoginForm.css';
+//import { login } from '../../store/session'
 
 function LoginFormPage() {
     const dispatch = useDispatch();
@@ -24,6 +25,11 @@ function LoginFormPage() {
                 if (data && data.errors) setErrors(data.errors);
             });
     }
+
+    const demouser = (e) => {
+        e.preventDefault()
+        dispatch(sessionActions.login( {credential: "Demo-lition", password: "password"} ))
+      }
 
     return (
     <div className='login'>
@@ -50,6 +56,12 @@ function LoginFormPage() {
                 />
             </label>
             <button className="submit__button button" type="submit">Log In</button>
+        <div>
+          <button onClick={demouser} id='demo'>
+            Demo Login
+          </button>
+        </div>
+        
         </form>
     </div>
     );
