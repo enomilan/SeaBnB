@@ -21,6 +21,7 @@ app.use(express.json());
 // Security Middleware
 if (!isProduction) {
     app.use(cors());
+}
     app.use(helmet({
         contentSecurityPolicy: false
     }));
@@ -34,7 +35,7 @@ if (!isProduction) {
             },
         })
     )
-}
+
 
 app.use(routes); // Connect all the routes
 
