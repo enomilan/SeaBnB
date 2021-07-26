@@ -8,6 +8,7 @@ function Reviews() {
 
     return(
         <div>
+            <div>
             <form onSubmit={}>
                 <textarea
                     name='comment'
@@ -20,6 +21,12 @@ function Reviews() {
                 </textarea>
 
             </form>
+        </div>
+            <div>
+                <form onSubmit={}>
+                    
+                </form>
+            </div>
         </div>
         
             
