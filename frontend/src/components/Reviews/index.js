@@ -7,7 +7,22 @@ function Reviews() {
 
 
     return(
-        <div></div>
+        <div>
+            <form onSubmit={}>
+                <textarea
+                    name='comment'
+                    rows='5'
+                    cols='50'
+                    onChange={}
+                    value={null}
+                >
+                    Submit Review
+                </textarea>
+
+            </form>
+        </div>
+        
+            
     )
 
 }
