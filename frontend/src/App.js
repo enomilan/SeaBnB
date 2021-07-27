@@ -9,6 +9,7 @@ import Place from "./components/Place"
 //import Reviews from './components/Reviews'
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
+import Reviews from './components/Reviews'
 
 function App() {
   const dispatch = useDispatch();
@@ -32,7 +33,7 @@ function App() {
             <SignupFormPage />
           </Route>
           <Route path="/places/:id">
-            <Place/>
+            <Place/> <Reviews/>
           </Route>
         </Switch>
       )}
