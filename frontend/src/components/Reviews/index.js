@@ -8,7 +8,14 @@ function Reviews() {
     const [postNewRating, setPostNewRating] = useState("")
 
 
+    //activate edit ratings
+    const [editRatings, setEditRatings] = useState(false)
     const [editedRating, setEditedRating] = useState('')
+
+    const editIt = (e) => {
+        setEditRatings(true)
+    }
+
 
     return(
         <div>
@@ -27,6 +34,7 @@ function Reviews() {
             </form>
         </div>
             <div>
+                {editRatings ? (
                 <form onSubmit={null}>
                 <textarea 
                     name='edit'
@@ -34,10 +42,10 @@ function Reviews() {
                     value={editedRating}
                 />
                 <button type='submit' id='comments_button'>Done</button>
-                </form>
+                </form>):( <>
 
-                <button onClick={null}id='comments_button'>Edit</button>
-                <button onClick={null}id='comments_button'>Delete</button>
+                <button onClick={editIt}id='comments_button'>Edit</button>
+                <button onClick={null}id='comments_button'>Delete</button> </>)}
             </div>
         </div>
         
