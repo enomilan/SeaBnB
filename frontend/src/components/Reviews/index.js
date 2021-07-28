@@ -30,7 +30,7 @@ function Reviews() {
                 
                     Rating
                 </textarea>
-                <button type='submit' id='comment_button'>Submit</button>
+                <button type='submit' id='comment_button'>Submit Review</button>
             </form>
         </div>
             <div>
@@ -43,9 +43,10 @@ function Reviews() {
                 />
                 <button type='submit' id='comments_button'>Done</button>
                 </form>):( <>
+                    <span>review</span> <span>by user</span>
 
-                <button onClick={editIt}id='comments_button'>Edit</button>
-                <button onClick={null}id='comments_button'>Delete</button> </>)}
+                <button onClick={editIt}id='comments_button'>Edit Review</button>
+                <button onClick={null}id='comments_button'>Delete Review</button> </>)}
             </div>
         </div>
         
