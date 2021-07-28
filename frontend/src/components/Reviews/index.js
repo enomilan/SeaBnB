@@ -7,6 +7,9 @@ function Reviews() {
 
     const [postNewRating, setPostNewRating] = useState("")
 
+
+    const [editedRating, setEditedRating] = useState('')
+
     return(
         <div>
             <div>
@@ -18,15 +21,23 @@ function Reviews() {
                     onChange={null}
                     value={postNewRating}>
                 
-                    Submit
+                    Rating
                 </textarea>
-
+                <button type='submit' id='comment_button'>Submit</button>
             </form>
         </div>
             <div>
                 <form onSubmit={null}>
-
+                <textarea 
+                    name='edit'
+                    onChange={null}
+                    value={editedRating}
+                />
+                <button type='submit' id='comments_button'>Done</button>
                 </form>
+
+                <button onClick={null}id='comments_button'>Edit</button>
+                <button onClick={null}id='comments_button'>Delete</button>
             </div>
         </div>
         
