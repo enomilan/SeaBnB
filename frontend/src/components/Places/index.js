@@ -29,9 +29,7 @@ function Places() {
 
     return(
         <div >
-            
-                
-                    
+                                             
                 
                 <div className='places'>
                     {places.map(place=> {
