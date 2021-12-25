@@ -17,7 +17,7 @@ function Place() {
 
             
 
-            setPlace(data)
+            //setPlace(data)
 
         }
 
