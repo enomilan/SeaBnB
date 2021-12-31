@@ -21,7 +21,7 @@ function Place() {
 
         }
 
-        fetchData()
+        //fetchData()
     },[id])
 
     
