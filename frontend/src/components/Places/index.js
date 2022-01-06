@@ -41,7 +41,7 @@ function Places() {
                             <span> Price: ${place.price}</span>
                                                         
                             <div className='photo'><img src={place.image}/></div>
-                            
+                            <button>Book</button>
                         </div>
                     
                     
