@@ -39,8 +39,7 @@ function Places() {
 
                         Location: <a href={`/places/${place.id}`} id='text'>{place.location}</a>
                             <span> Price: ${place.price}</span>
-                           
-                             
+                                                        
                             <div className='photo'><img src={place.image}/></div>
                             
                         </div>
