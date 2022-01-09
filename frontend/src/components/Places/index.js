@@ -49,15 +49,15 @@ function Places() {
                     //   
                     //              
                 
-                    // <div id='location'>
+                    <div id='location'>
                        
-                    // </div>
-                    // <div id ='price'>
-                    //     
-                    // </div>
-                    // <div id= 'description'>
-                    //     {places.description}
-                    // </div>
+                    </div>
+                    <div id ='price'>
+                        
+                    </div>
+                    <div id= 'description'>
+                        {places.description}
+                    </div>
                     
                 )})}
 
