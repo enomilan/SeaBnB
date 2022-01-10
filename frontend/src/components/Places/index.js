@@ -42,6 +42,7 @@ function Places() {
                                                         
                             <div className='photo'><img src={place.image}/></div>
                             <button>Book</button>
+                            <button>Cancel</button>
                         </div>
                     
                     
