@@ -24,7 +24,7 @@ function Place() {
         fetchData()
     },[id])
 
-    
+    //console.log(place.image)
     
 
     return place &&(
